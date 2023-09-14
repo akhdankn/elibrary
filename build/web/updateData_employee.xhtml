@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <head>
+        <title>Update Data Employee</title>
+        <link rel='icon' href='resources/pictures/bookshelf.svg'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <h:body class="d-flex" style="background-color: #454545">
+        <ui:include src="sidebar.xhtml"/>
+        <div class="container">
+            <main style="padding-left: 15rem">
+                <div class="row g-5">
+                    <div class="col-md-9 text-white">
+                        <h4 class="my-3 text-center">Update Data Employee</h4>
+                        <h:form class="needs-validation">
+                            <div class="row g-3">
+                                <div class="input-group has-validation">
+                                    <h:inputText class="form-control" id="Employee" value="#{tblEmployee.idEmployee}"/>
+                                    <h:commandButton class="btn btn-warning rounded mx-2" type="submit" value="Search" action="#{tblEmployee.getbyid()}"/>
+                                </div>                                
+                                <div class="col-12">
+                                    <label for="employee_name" class="form-label">Employee Name</label>
+                                    <div class="input-group has-validation">
+                                        <h:inputText class="form-control" id="employee_name" value="#{tblEmployee.employeeName}"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="employee_address" class="form-label">Employee Address</label>
+                                    <div class="input-group has-validation">
+                                        <h:inputText class="form-control" id="employee_address" value="#{tblEmployee.employeeAddress}"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <div class="input-group has-validation">
+                                        <h:inputText class="form-control" id="phone" value="#{tblEmployee.phone}"/>
+                                    </div>
+                                </div>                                                               
+                            <br/>
+                            <h:commandButton class="btn btn-outline-light" type="submit" value="Update Data" action="#{tblEmployee.update}"
+                                             onclick="if (! confirm('Are You Sure Want Update Data?')) return false"/>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </h:body>
+</html>

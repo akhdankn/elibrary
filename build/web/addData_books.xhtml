@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <h:head>
+        <title>Add Data Books</title>
+        <link rel='icon' href='resources/pictures/bookshelf.svg'/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>       
+    </h:head>
+    <h:body class="d-flex" style="background-color: #454545">
+        <ui:include src="sidebar.xhtml"/>
+        <div class="container">
+            <main style="padding-left: 15rem">
+                <div class="row g-5">
+                    <div class="col-md-9 text-white">
+                        <h4 class="my-3 text-center">Add Data Books</h4>
+                        <h:form class="needs-validation">
+                            <div class="row g-3">                                
+                                <div class="col-12">
+                                    <label for="book_code" class="form-label">Book Code</label>
+                                    <div class="input-group has-validation">
+                                        <h:inputText class="form-control" id="book_code" value="#{tblBooks.bookCode}"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="title" class="form-label">Title</label>
+                                    <div class="input-group has-validation">
+                                        <h:inputText class="form-control" id="title" value="#{tblBooks.title}"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="author" class="form-label">Author</label>
+                                    <div class="input-group has-validation">
+                                        <h:inputText class="form-control" id="author" value="#{tblBooks.author}"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="publisher" class="form-label">Publisher</label>
+                                    <div class="input-group has-validation">
+                                        <h:inputText class="form-control" id="publisher" value="#{tblBooks.publisher}"/>
+                                    </div>
+                                </div>
+                            <br/>
+                            <h:commandButton class="btn btn-outline-light" type="submit" value="Add Data" action="#{tblBooks.save()}"/>
+                            </div>
+                        </h:form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </h:body>
+</html>

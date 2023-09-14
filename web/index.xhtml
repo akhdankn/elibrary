@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    
+    
+    <h:head>
+        <title>E-Library</title>        
+        <link rel='icon' href='resources/pictures/bookshelf.svg'/>
+        <link rel="stylesheet" href="resources/css2/style.css"/>
+        <link rel="stylesheet" href="resources/css2/owl.carousel.min.css"/>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/> 
+    </h:head>
+    <h:body>
+        <div class="d-lg-flex half">
+        <div class="bg" style="background-image: url('resources/pictures/cover(2).jpg')"></div>
+            <div class="contents" style='background-color:#454545'>
+              <div class="container">
+                <div class="row align-items-center ">
+                  <div class="col-md-12 ">
+                    <div class="form-block mx-auto rounded">
+                      <div class="text-center mb-5">
+                        <h3 class="text-uppercase"><strong>E-Library</strong></h3>
+                      </div>
+                      <h:form>
+                        <div class="form-group first">
+                          <label for="username">Username</label>
+                          <h:inputText a:placeholder="Username" class="form-control mb-3" id="floatingUsername" value="#{tblAdmin.username}"/>
+                        </div>
+                        <div class="form-group last mb-3">
+                          <label for="password">Password</label>
+                          <h:inputSecret a:placeholder="Password" class="form-control" id="floatingPassword" value="#{tblAdmin.password}"/>
+                        </div>                              
+                        <h:commandButton class="w-100 btn btn-lg btn-warning" type="submit" action="#{tblAdmin.validasiLogin}" value="Login"/>                                                               
+                      </h:form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>    
+    </h:body>
+</html>
+
